@@ -1,3 +1,4 @@
+{% load static %}
 {% load menu_tag %}
 
 <!DOCTYPE html>
@@ -6,16 +7,23 @@
 <head>
     <title>Корень</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
     {% if roots %}
-        <h1>Все корневые меню этого сайта:</h1>
-        {% for menu in roots %}
-            {% draw_menu menu.name %}
-        {% endfor %}
+        <header>
+            <h1>Все корневые меню этого сайта:</h1>
+        </header>
+        <main>
+            {% for menu in roots %}
+                {% draw_menu menu.name %}
+            {% endfor %}
+        </main>
     {% else %}
-        <h1>На этом сайте пока нет меню.</h1>
+        <header>
+            <h1>На этом сайте пока нет меню.</h1>
+        </header>
     {% endif %}
 </body>
 

@@ -325,3 +325,4 @@ $RECYCLE.BIN/
 
 main_app/migrations/*
 !main_app/migrations/__init__.py
+collected_static/
