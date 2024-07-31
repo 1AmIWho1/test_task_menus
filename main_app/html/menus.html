@@ -1,0 +1,22 @@
+{% load menu_tag %}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Корень</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+</head>
+
+<body>
+    {% if roots %}
+        <h1>Все корневые меню этого сайта:</h1>
+        {% for menu in roots %}
+            {% draw_menu menu.name %}
+        {% endfor %}
+    {% else %}
+        <h1>На этом сайте пока нет меню.</h1>
+    {% endif %}
+</body>
+
+</html>
